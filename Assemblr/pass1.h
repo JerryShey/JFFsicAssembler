@@ -13,7 +13,6 @@ extern SYMTAB SymTable[MAX];
 
 // Function
 void pass1();
-bool hasPlus(char *);
 int isOtherCode(char *);
 int RESX(char *, char *);
 int Hex2Dec(char);
@@ -64,15 +63,14 @@ void pass1(){
 					else if (!strcmp(code[1], "BASE")){
 						B = code[2];
 					}
+					else
+					{
+						break;
+					}
 				}
 			}
 			else{
-				if (hasPlus(code[1])){
-					offset = 0x04;	//format 4 長度為4 bytes
-				}
-				else{
-					offset = 0x03;	//format 3 長度為3 bytes
-				}
+				offset = 0x03;
 			}
 			add(code[0], Loc);
 		}
@@ -93,12 +91,7 @@ void pass1(){
 				}
 			}
 			else{
-				if (hasPlus(code[0])){
-					offset = 0x04;	//format 4 長度為4 bytes
-				}
-				else{
 					offset = 0x03;	//format 3 長度為3 bytes
-				}
 			}
 		}
 		else
@@ -138,17 +131,6 @@ int isOtherCode(char *code){
 	else
 		return 0;
 	return 0;
-}
-
-/*	hasPlus()
-**	TO check this code whather is format 4
-**/
-bool hasPlus(char *code){
-	if (code[0] == '+'){
-		return true;
-	}
-	else
-		return false;
 }
 
 /*	RESX
