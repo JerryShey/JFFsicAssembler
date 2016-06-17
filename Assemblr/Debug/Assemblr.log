@@ -1,13 +1,13 @@
-﻿已經開始建置於 2016/6/15 下午 05:25:43。
-     1>節點 2 (Build 目標) 上的專案 "C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\JFFsicAssemblr\Assemblr\Assemblr.vcxproj"。
+﻿已經開始建置於 2016/6/15 下午 08:03:39。
+     1>節點 2 (Build 目標) 上的專案 "C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\Assemblr\Assemblr\Assemblr.vcxproj"。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\JFFsicAssemblr\Debug\Assemblr.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\JFFsicAssemblr\Debug\Assemblr.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\JFFsicAssemblr\Debug\Assemblr.lib" /MACHINE:X86 Debug\main.obj
-         Assemblr.vcxproj -> C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\JFFsicAssemblr\Debug\Assemblr.exe
-     1>專案 "C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\JFFsicAssemblr\Assemblr\Assemblr.vcxproj" (Build 目標) 建置完成。
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\Assemblr\Debug\Assemblr.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\Assemblr\Debug\Assemblr.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\Assemblr\Debug\Assemblr.lib" /MACHINE:X86 Debug\main.obj
+         Assemblr.vcxproj -> C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\Assemblr\Debug\Assemblr.exe
+     1>專案 "C:\Users\user\Desktop\作業\大二包(下)\組合語言與系統程式\Assemblr\Assemblr\Assemblr.vcxproj" (Build 目標) 建置完成。
 
 建置成功。
 
-經過時間 00:00:01.77
+經過時間 00:00:02.14

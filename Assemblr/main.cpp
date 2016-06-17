@@ -18,6 +18,7 @@ extern SYMTAB SymTable[MAX];
 int main(){
 	makeOpTab();
 	pass1();
+	printSYMTAB();
 	getchar();
 	return 0;
 }
@@ -39,7 +40,7 @@ void makeOpTab(){
 				OpTable[cnt++].opcode = 16 * Hex2Dec(pch[2]) + Hex2Dec(pch[3]);
 			}
 			else{
-				OpTable[cnt].name = pch;
+				char_traits<char>::copy(OpTable[cnt].name, pch, strlen(pch));
 				i++;
 			}
 			pch = strtok_s(NULL, delim, &p);

@@ -21,7 +21,7 @@ void cutWord(char*, int);
 int setStart(char*);
 
 //global variable
-int Loc;
+int Loc = NULL;
 char *B;
 char *BWvalue[2];
 
@@ -37,6 +37,7 @@ void pass1(){
 	while (infile) {
 		// 從檔案讀資料
 		infile.getline(buffer, len);
+		printf("%4X	", Loc);
 		cout << buffer << endl;
 		char * pch;
 		int cnt = 0;
@@ -50,6 +51,7 @@ void pass1(){
 		int offset = 0;
 		int num;
 		if (cnt == 3){
+			add(code[0], Loc);
 			if (num = isOtherCode(code[1])){
 				if (num == 3){
 					offset = RESX(code[1], code[2]);
@@ -72,7 +74,6 @@ void pass1(){
 			else{
 				offset = 0x03;
 			}
-			add(code[0], Loc);
 		}
 		else if (cnt == 2){
 			if (num = isOtherCode(code[0])){
@@ -97,7 +98,7 @@ void pass1(){
 		else
 			offset = 0x03;
 		Loc += offset;
-		printf("%4X	", Loc);
+		
 	}
 }
 

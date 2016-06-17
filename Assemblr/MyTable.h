@@ -2,18 +2,22 @@
 #define MyTable_H
 
 #define MAX 100
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <fstream>
+#include <string>
+
+using namespace std;
 
 //string otherCode[7] = { "START", "BASE", "BYTE", "WORD", "RESB", "RESW", "END" };
 struct OPTAB{
-	char *name;
+	char name[10];
 	int opcode;
 };
 
 struct SYMTAB{
-	char *name;
+	char name[10];
 	int loc;
 };
 
@@ -21,40 +25,46 @@ OPTAB OpTable[59];
 SYMTAB SymTable[MAX];
 
 int cnt = 0;
-int check = -1;
 
-bool isOpcode(char *mnemonic){
-	bool find = false;
+int isOpcode(char *mnemonic){
 	for (int i = 0; i < 59; i++){
 		if (!strcmp(mnemonic, OpTable[i].name)){
-			find = true;
-			check = i;
+			return i + 1;
 			break;
 		}
 	}
-	return find;
+	return 0;
 }
 
-int getOpcode(){
-	int loc = check;
-	check = -1;
-	return (loc);
+int getOpcode(int num){
+	return num;
 }
 
 void add(char *name, int loc){
-	SymTable[cnt++] = { name, loc };
+	
+	char_traits<char>::copy(SymTable[cnt].name, name, strlen(name));
+	SymTable[cnt++].loc = loc;
 }
 
-bool isExist(char *name){
+int isExist(char *name){
 	bool find = false;
 	for (int i = 0; i < cnt; i++){
 		if (!strcmp(name, SymTable[i].name)){
-			find = true;
-			check = i;
-			break;
+			return i + 1;
 		}
 	}
-	return find;
+	return 0;
 
+}
+void pritfOPTAB(){
+	for (int i = 0; i < 59; i++){
+		printf("%s, %X\n", OpTable[i].name, OpTable[i].opcode);
+	}
+}
+void printSYMTAB(){
+	for (int i = 0; i < cnt; i++){
+		printf("%s, %X\n", SymTable[i].name, SymTable[i].loc);
+		//cout << SymTable[i].name << ", " << SymTable[i].loc << endl;
+	}
 }
 #endif
